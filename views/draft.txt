@@ -1,0 +1,6 @@
+  const note1 = new Note({
+    dateCreated: "Created Date",
+    createdBy: "Created by",
+    category: "Category",
+    noteBody: "Main content",
+  });

@@ -1,0 +1,25 @@
+<%- include('header') %>
+<div class="container mt-5">
+  <div class="row">
+    <form action="/create_note" method="post">
+      <div class="col col-sm-12">
+           <label for="exampleInputEmail1" class="form-label">Date:</label>
+        <input class="form-control "  name="date" placeholder="date" type="date" />
+      </div>
+      <div class="col col-sm-12">
+           <label for="exampleInputEmail1" class="form-label">Created By:</label>
+        <input class="form-control"  name="authour" placeholder="author" type="text" />
+      </div>
+      <div class="col col-sm-12">
+           <label for="exampleInputEmail1" class="form-label">Category</label>
+        <input class="form-control"  name="category" placeholder="category" type="text" />
+      </div>
+      <div class="col col-sm-12">
+           <label for="exampleInputEmail1" class="form-label">Content:</label>
+        <input class="form-control"  name="body" placeholder="context" type="text" />
+      </div>
+      <button type="submit" class="btn mt-5 btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+<%- include('footer') %>

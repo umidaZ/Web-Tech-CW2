@@ -1,0 +1,49 @@
+<%- include('header') %>
+<div class="container mt-5">
+  <div class="row">
+    <form action="/edit/<%= memo[0]['_id']  %>" method="post">
+      <div class="col-sm-12 col">
+        <label for="exampleInputEmail1" class="form-label">Date:</label>
+        <input
+          name="date"
+          class="form-control"
+          value="<%= memo[0]['date']  %>"
+          placeholder="date"
+          type="date"
+        />
+      </div>
+      <div class="col-sm-12 col">
+        <label for="exampleInputEmail1" class="form-label">Category</label>
+        <input
+          name="category"
+          class="form-control"
+          value="<%= memo[0]['category']  %>"
+          placeholder="category"
+          type="text"
+        />
+      </div>
+      <div class="col-sm-12 col">
+        <label for="exampleInputEmail1" class="form-label">Created By:</label>
+        <input
+          name="authour"
+          class="form-control"
+          value="<%= memo[0]['authour']  %>"
+          placeholder="author"
+          type="text"
+        />
+      </div>
+      <div class="col-sm-12 col">
+        <label for="exampleInputEmail1" class="form-label">Content:</label>
+        <input
+          name="body"
+          class="form-control"
+          value="<%= memo[0]['body'] %>"
+          placeholder="context"
+          type="text"
+        />
+      </div>
+      <button type="submit" class="btn mt-5 btn-primary">Update</button>
+    </form>
+  </div>
+</div>
+<%- include('footer') %>

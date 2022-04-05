@@ -1,0 +1,32 @@
+<%- include('header') %>
+
+<div class="container mt-5">
+  <div class="row">
+    <% if(memo.length === 0){ %>
+    <h1 class="text-center">There are no memos!</h1>
+    <h2 class="text-center">
+      <a href="/create" style="text-decoration: none" class="text-center">Please add Memem ➕</a>
+    </h2>
+    <% } else { %> <% for(let i = 0; i < memo.length ; i++) {%>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-header bg-warning"><%= memo[i]['date'] %> <br>
+        <span><%= memo[i]['category'] %> </span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%= memo[i]['authour'] %></h5>
+          <p class="card-text"><%= memo[i]['body'] %></p>
+          <a href="/edit/<%= memo[i]['_id'] %>" class="btn btn-primary"
+            >Update</a
+          >
+          <a href="/delete/<%= memo[i]['_id'] %>" class="btn btn-danger"
+            >Delete</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <% } %> <% } %>
+  </div>
+</div>
+<%- include('footer') %>
